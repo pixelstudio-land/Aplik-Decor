@@ -1,5 +1,5 @@
 /* ============================================
-   APLIK DECOR — SCRIPT GLOBAL
+   APLIK DECOR — SCRIPT GLOBAL & INTERATIVIDADE
    ============================================ */
 
 // ⚠️ SUBSTITUIR PELO LINK DO FORMULÁRIO DO CLIENTE
@@ -27,16 +27,21 @@ function applyCTA() {
     el.target = "_blank";
     el.rel = "noopener noreferrer";
   });
-  document.querySelectorAll("[data-cta='piso']").forEach(el => { el.href = LP.piso });
-  document.querySelectorAll("[data-cta='boiserie']").forEach(el => { el.href = LP.boiserie });
-  document.querySelectorAll("[data-cta='papel']").forEach(el => { el.href = LP.papel });
+  document.querySelectorAll("[data-cta='piso']").forEach(el => { el.href = LP.piso; });
+  document.querySelectorAll("[data-cta='boiserie']").forEach(el => { el.href = LP.boiserie; });
+  document.querySelectorAll("[data-cta='papel']").forEach(el => { el.href = LP.papel; });
 }
 
-/* ── Header scroll ─────────────────────── */
-function initHeader() {
+/* ── Header scroll & Sticky Mobile Bar ──── */
+function initHeaderAndStickyBar() {
   const h = document.querySelector(".header");
-  if (!h) return;
-  const onScroll = () => h.classList.toggle("scrolled", window.scrollY > 48);
+  const stickyBar = document.querySelector(".mobile-sticky-bar");
+
+  const onScroll = () => {
+    const y = window.scrollY;
+    if (h) h.classList.toggle("scrolled", y > 48);
+    if (stickyBar) stickyBar.classList.toggle("visible", y > 260);
+  };
   window.addEventListener("scroll", onScroll, { passive: true });
 }
 
@@ -85,6 +90,135 @@ function initFAQ() {
   });
 }
 
+/* ── Before & After Interactive Slider ─── */
+function initBeforeAfter() {
+  const sliders = document.querySelectorAll(".ba-container");
+  sliders.forEach(slider => {
+    const after = slider.querySelector(".ba-after");
+    const handle = slider.querySelector(".ba-handle");
+    if (!after || !handle) return;
+
+    let isDragging = false;
+
+    const setPosition = (clientX) => {
+      const rect = slider.getBoundingClientRect();
+      let pos = ((clientX - rect.left) / rect.width) * 100;
+      if (pos < 0) pos = 0;
+      if (pos > 100) pos = 100;
+      after.style.width = pos + "%";
+      handle.style.left = pos + "%";
+    };
+
+    slider.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      setPosition(e.clientX);
+    });
+
+    window.addEventListener("mouseup", () => { isDragging = false; });
+    window.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      setPosition(e.clientX);
+    });
+
+    // Touch events for mobile
+    slider.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      if (e.touches[0]) setPosition(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener("touchend", () => { isDragging = false; });
+    window.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      if (e.touches[0]) setPosition(e.touches[0].clientX);
+    }, { passive: true });
+  });
+}
+
+/* ── Lightbox Modal ─────────────────────── */
+function initLightbox() {
+  // Criar elemento Lightbox no DOM caso não exista
+  if (!document.getElementById("aplik-lightbox")) {
+    const lb = document.createElement("div");
+    lb.id = "aplik-lightbox";
+    lb.className = "lightbox";
+    lb.innerHTML = `
+      <div class="lightbox-box">
+        <button class="lightbox-close" aria-label="Fechar">&times;</button>
+        <div class="lightbox-img-wrap">
+          <img src="" alt="" id="lightbox-img">
+        </div>
+        <div class="lightbox-footer">
+          <span class="lightbox-title" id="lightbox-title">Aplik Decor</span>
+          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Quero Este Modelo</a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(lb);
+    applyCTA();
+  }
+
+  const lightbox = document.getElementById("aplik-lightbox");
+  const lbImg = document.getElementById("lightbox-img");
+  const lbTitle = document.getElementById("lightbox-title");
+  const lbClose = lightbox.querySelector(".lightbox-close");
+
+  const openLightbox = (src, title) => {
+    lbImg.src = src;
+    lbTitle.textContent = title || "Projeto Aplik Decor";
+    lightbox.classList.add("open");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    lightbox.classList.remove("open");
+    document.body.style.overflow = "";
+  };
+
+  lbClose.addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+  });
+
+  // Vincular em itens zoomable / galeria / estilos
+  document.querySelectorAll(".gitem, .style-item, .zoomable").forEach(item => {
+    item.classList.add("zoomable");
+    item.addEventListener("click", () => {
+      const img = item.querySelector("img");
+      const label = item.querySelector(".gitem-label, .style-lbl, .ambient-lbl");
+      if (img) {
+        openLightbox(img.src, label ? label.textContent : img.alt);
+      }
+    });
+  });
+}
+
+/* ── Wallpaper Filter ──────────────────── */
+function initWallpaperFilter() {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const styleItems = document.querySelectorAll(".style-item");
+  if (!filterBtns.length || !styleItems.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      const cat = btn.getAttribute("data-filter");
+
+      styleItems.forEach(item => {
+        const itemCat = item.getAttribute("data-category") || "";
+        if (cat === "all" || itemCat.includes(cat)) {
+          item.classList.remove("hide");
+        } else {
+          item.classList.add("hide");
+        }
+      });
+    });
+  });
+}
+
 /* ── Scroll animations ─────────────────── */
 function initAnimations() {
   const io = new IntersectionObserver(
@@ -102,8 +236,11 @@ function initAnimations() {
 /* ── Init ──────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
   applyCTA();
-  initHeader();
+  initHeaderAndStickyBar();
   initMenu();
   initFAQ();
+  initBeforeAfter();
+  initLightbox();
+  initWallpaperFilter();
   initAnimations();
 });
