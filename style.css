@@ -22,7 +22,7 @@
   --creme-escuro: #C8BFA8;
   --texto:        #EDE7D3;
   --texto-muted:  rgba(237,231,211,.52);
-  --header-h:     72px;
+  --header-h:     62px;
   --max-w:        1200px;
   --r:            12px;
   --r-lg:         20px;
@@ -98,49 +98,69 @@ h1,h2,h3,h4,h5{
    HEADER
    ================ */
 .header{
-  position:fixed;inset:0 0 auto 0;z-index:200;
+  position:fixed;top:0;left:0;right:0;z-index:200;
   height:var(--header-h);
-  background:rgba(10,10,10,.88);
-  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
-  border-bottom:1px solid var(--dourado-borda);
-  transition:background .3s ease,box-shadow .3s ease;
+  background:rgba(10,10,10,.94);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(196,147,63,.2);
+  display:flex;align-items:center;
+  transition:all .3s ease;
 }
-.header.scrolled{background:rgba(10,10,10,.97);box-shadow:0 4px 32px rgba(0,0,0,.55)}
+.header.scrolled{
+  background:rgba(8,8,8,.98);
+  box-shadow:0 4px 24px rgba(0,0,0,.7);
+  border-bottom-color:rgba(196,147,63,.3);
+}
+.header .container{
+  height:100%;width:100%;
+  display:flex;align-items:center;
+}
 .header-inner{
-  height:100%;display:flex;align-items:center;
-  justify-content:space-between;gap:24px;
+  width:100%;height:100%;
+  display:flex;align-items:center;
+  justify-content:space-between;gap:20px;
 }
 
 /* Logo */
 .logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.logo-icon{width:38px;height:38px;flex-shrink:0}
+.logo-icon{width:34px;height:34px;flex-shrink:0}
 .logo-text{
   font-family:'Manrope',sans-serif;font-weight:800;
-  font-size:1.05rem;letter-spacing:.1em;color:var(--creme);
+  font-size:1rem;letter-spacing:.08em;color:var(--creme);
 }
 .logo-text span{color:var(--dourado)}
 
 /* Nav */
 .nav{display:none;align-items:center;gap:2px}
-@media(min-width:900px){.nav{display:flex}}
+@media(min-width:960px){.nav{display:flex}}
 .nav a{
   font-family:'Manrope',sans-serif;font-weight:600;
-  font-size:.8rem;letter-spacing:.03em;
-  color:var(--texto-muted);padding:6px 14px;border-radius:8px;
+  font-size:.8rem;letter-spacing:.02em;
+  color:var(--texto-muted);padding:6px 12px;border-radius:6px;
   transition:all .2s ease;
 }
-.nav a:hover{color:var(--creme);background:rgba(255,255,255,.06)}
+.nav a:hover{color:var(--creme);background:rgba(255,255,255,.05)}
+.nav .nav-back{
+  color:var(--dourado);
+  border:1px solid rgba(196,147,63,.25);
+  margin-left:6px;padding:4px 10px;border-radius:6px;font-size:.76rem;
+}
+.nav .nav-back:hover{background:var(--dourado-pale);color:var(--dourado-light)}
 
 /* Header actions */
-.header-actions{display:none;align-items:center;gap:12px}
-@media(min-width:900px){.header-actions{display:flex}}
+.header-actions{display:none;align-items:center}
+@media(min-width:960px){.header-actions{display:flex}}
+.header-actions .btn{
+  padding:8px 18px;font-size:.75rem;
+  letter-spacing:.05em;border-radius:6px;
+}
 
 /* Mobile menu btn */
 .menu-toggle{
   display:flex;flex-direction:column;gap:5px;
   background:none;border:none;padding:8px;
 }
-@media(min-width:900px){.menu-toggle{display:none}}
+@media(min-width:960px){.menu-toggle{display:none}}
 .menu-toggle span{
   display:block;width:22px;height:2px;
   background:var(--creme);border-radius:2px;
@@ -804,83 +824,6 @@ h1,h2,h3,h4,h5{
 [data-anim][data-delay="4"]{transition-delay:.4s}
 [data-anim][data-delay="5"]{transition-delay:.5s}
 [data-anim][data-delay="6"]{transition-delay:.6s}
-
-/* ================================================
-   HEADER & NAVIGATION REFINED
-   ================================================ */
-.header {
-  position: fixed;
-  inset: 0 0 auto 0;
-  z-index: 200;
-  height: var(--header-h);
-  background: rgba(10, 10, 10, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(196, 147, 63, 0.18);
-  transition: all 0.3s ease;
-}
-.header.scrolled {
-  background: rgba(8, 8, 8, 0.98);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
-  border-bottom-color: rgba(196, 147, 63, 0.3);
-}
-.header-inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-/* Nav */
-.nav {
-  display: none;
-  align-items: center;
-  gap: 4px;
-}
-@media (min-width: 960px) {
-  .nav { display: flex; }
-}
-.nav a {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-  color: var(--texto-muted);
-  padding: 8px 14px;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-.nav a:hover {
-  color: var(--creme);
-  background: rgba(255, 255, 255, 0.05);
-}
-.nav .nav-back {
-  color: var(--dourado);
-  border: 1px solid rgba(196, 147, 63, 0.25);
-  margin-left: 8px;
-  padding: 6px 12px;
-  border-radius: 6px;
-}
-.nav .nav-back:hover {
-  background: var(--dourado-pale);
-  color: var(--dourado-light);
-}
-
-/* Header actions */
-.header-actions {
-  display: none;
-  align-items: center;
-}
-@media (min-width: 960px) {
-  .header-actions { display: flex; }
-}
-.header-actions .btn {
-  padding: 10px 22px;
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  border-radius: 6px;
-}
 
 /* ================================================
    HERO BADGE & BACK LINK CLEANUP
