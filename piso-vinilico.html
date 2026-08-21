@@ -16,7 +16,7 @@
   <meta property="og:image" content="images/hero-piso.jpg">
   <meta property="og:site_name" content="Aplik Decor">
 
-  <!-- Performance & Fonts Preconnect -->
+  <!-- Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 <header class="header" id="header">
   <div class="container">
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Aplik Decor - Página inicial">
+      <a href="index.html" class="logo" aria-label="Aplik Decor - Início">
         <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <polygon points="30,4 56,30 30,56 4,30" fill="none" stroke="#C4933F" stroke-width="2.5"/>
           <polygon points="30,16 44,30 30,44 16,30" fill="none" stroke="#C4933F" stroke-width="2"/>
@@ -46,11 +46,11 @@
         <a href="#ambientes">Galeria</a>
         <a href="#como-funciona">Como Funciona</a>
         <a href="#faq">Dúvidas</a>
-        <a href="index.html">Voltar ao Início</a>
+        <a href="index.html" class="nav-back">← Início</a>
       </nav>
 
       <div class="header-actions">
-        <a href="#" class="btn btn-gold btn-sm" data-cta="form" id="piso-header-cta">Solicitar Orçamento</a>
+        <a href="#" class="btn btn-gold" data-cta="form" id="piso-header-cta">Solicitar Orçamento</a>
       </div>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -82,14 +82,17 @@
 
   <div class="container">
     <div class="hero-content">
-      <a href="index.html" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Voltar ao início
-      </a>
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Produto + Instalação Profissional Inclusa
+      <div class="hero-nav-top">
+        <a href="index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Voltar ao início
+        </a>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Produto + Instalação Profissional Inclusa
+        </div>
       </div>
+
       <h1 class="hero-title">
         Transforme seu ambiente com <span class="gold">Piso Vinílico.</span>
       </h1>
@@ -101,9 +104,9 @@
       <div class="hero-btns">
         <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="piso-hero-cta">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Quero Meu Orçamento Agora
+          Preencher Formulário de Orçamento
         </a>
-        <a href="#beneficios" class="btn btn-outline">Ver Mais Detalhes</a>
+        <a href="#beneficios" class="btn btn-outline">Ver Detalhes</a>
       </div>
     </div>
   </div>
@@ -137,12 +140,8 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Garantia no serviço
         </div>
-        <div class="chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          Entrega rápida
-        </div>
       </div>
-      <a href="#" class="btn btn-gold" data-cta="form" id="offer-cta">Solicitar Orçamento Grátis</a>
+      <a href="#" class="btn btn-gold" data-cta="form" id="offer-cta">Solicitar Orçamento no Formulário</a>
     </div>
   </div>
 </section>
@@ -296,50 +295,11 @@
       </div>
       <div class="obj-card">
         <div class="obj-q">Atendem fora de Primavera do Leste?</div>
-        <div class="obj-a">Sim! Atendemos toda a região de Primavera do Leste, Campo Verde, Paranatinga e Rondonópolis. Fale com a gente para consultar seu endereço.</div>
+        <div class="obj-a">Sim! Atendemos toda a região de Primavera do Leste, Campo Verde, Paranatinga e Rondonópolis. Preencha o formulário para consultar rota.</div>
       </div>
       <div class="obj-card">
         <div class="obj-q">O preço já inclui a instalação?</div>
         <div class="obj-a">Sim! A partir de R$ 219/m² já com produto e mão de obra de instalação especializada inclusos.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     COMO FUNCIONA
-═══════════════════════════════════════ -->
-<section class="section section-alt" id="como-funciona" aria-labelledby="steps-piso-title">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:52px">
-      <div class="section-label" data-anim>Do contato à instalação</div>
-      <h2 class="section-title" id="steps-piso-title" data-anim data-delay="1">Como funciona <span class="gold">o processo?</span></h2>
-    </div>
-    <div class="steps" data-anim data-delay="2">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Você solicita orçamento</div>
-        <div class="step-desc">Informa a metragem aproximada e cidade.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Apresentamos o catálogo</div>
-        <div class="step-desc">Enviamos fotos e amostras dos tons disponíveis.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">Você escolhe o tom</div>
-        <div class="step-desc">Define o padrão que mais combina com seus móveis.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Agendamos a instalação</div>
-        <div class="step-desc">Nossa equipe comparece no dia e horário combinado.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div class="step-title">Ambiente novo</div>
-        <div class="step-desc">Acabamento perfeito e limpo em até 24 horas.</div>
       </div>
     </div>
   </div>
@@ -354,11 +314,7 @@
     <h2 class="section-title" id="cta-piso-final" data-anim data-delay="1">Solicite seu orçamento <span class="gold">hoje mesmo.</span></h2>
     <p class="section-sub" data-anim data-delay="2">A partir de R$ 219/m² com instalação profissional inclusa em Primavera do Leste e região.</p>
     <div class="hero-btns" style="justify-content:center;margin-top:40px" data-anim data-delay="3">
-      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="piso-final-cta">Quero Meu Orçamento Grátis</a>
-      <a href="#" class="btn btn-ghost btn-lg" data-cta="whatsapp" id="piso-wa-cta">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        Falar no WhatsApp
-      </a>
+      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="piso-final-cta">Preencher Formulário de Orçamento</a>
     </div>
   </div>
 </section>
@@ -395,11 +351,6 @@
             Primavera do Leste — MT
           </div>
         </div>
-        <div class="footer-social">
-          <a href="https://instagram.com/aplikdecor_" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da Aplik Decor">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -408,22 +359,18 @@
   </div>
 </footer>
 
-<!-- WhatsApp float -->
-<a href="#" class="wa-float" data-cta="whatsapp" aria-label="Falar no WhatsApp">
-  <div class="wa-badge">
-    <span class="wa-badge-dot"></span>
-    Online em Primavera do Leste
+<!-- Floating Form CTA (Desktop) -->
+<a href="#" class="float-cta" data-cta="form" aria-label="Solicitar Orçamento">
+  <div class="float-cta-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </div>
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Solicitar Orçamento</span>
 </a>
 
-<!-- STICKY MOBILE BOTTOM BAR -->
-<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ações rápidas">
+<!-- STICKY MOBILE BOTTOM BAR (100% Formulário) -->
+<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ação de conversão">
   <div class="mobile-sticky-inner">
-    <a href="#" class="btn btn-gold" data-cta="form">Orçamento Piso Vinílico</a>
-    <a href="#" class="wa-btn-icon" data-cta="whatsapp" aria-label="WhatsApp">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    </a>
+    <a href="#" class="btn btn-gold" style="width:100%" data-cta="form">Orçamento Piso Vinílico no Formulário</a>
   </div>
 </div>
 

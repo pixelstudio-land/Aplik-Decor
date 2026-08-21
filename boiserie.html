@@ -16,7 +16,7 @@
   <meta property="og:image" content="images/hero-boiserie.jpg">
   <meta property="og:site_name" content="Aplik Decor">
 
-  <!-- Performance & Fonts Preconnect -->
+  <!-- Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 <header class="header" id="header">
   <div class="container">
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Aplik Decor - Página inicial">
+      <a href="index.html" class="logo" aria-label="Aplik Decor - Início">
         <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <polygon points="30,4 56,30 30,56 4,30" fill="none" stroke="#C4933F" stroke-width="2.5"/>
           <polygon points="30,16 44,30 30,44 16,30" fill="none" stroke="#C4933F" stroke-width="2"/>
@@ -46,11 +46,11 @@
         <a href="#modelos">Modelos</a>
         <a href="#projetos">Projetos</a>
         <a href="#faq">Dúvidas</a>
-        <a href="index.html">Voltar ao Início</a>
+        <a href="index.html" class="nav-back">← Início</a>
       </nav>
 
       <div class="header-actions">
-        <a href="#" class="btn btn-gold btn-sm" data-cta="form" id="bois-header-cta">Solicitar Orçamento</a>
+        <a href="#" class="btn btn-gold" data-cta="form" id="bois-header-cta">Solicitar Orçamento</a>
       </div>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -82,14 +82,17 @@
 
   <div class="container">
     <div class="hero-content">
-      <a href="index.html" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Voltar ao início
-      </a>
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Elegância arquitetônica para qualquer ambiente
+      <div class="hero-nav-top">
+        <a href="index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Voltar ao início
+        </a>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Elegância arquitetônica para qualquer ambiente
+        </div>
       </div>
+
       <h1 class="hero-title">
         Dê personalidade e <span class="gold">sofisticação</span> às suas paredes.
       </h1>
@@ -101,7 +104,7 @@
       <div class="hero-btns">
         <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="bois-hero-cta">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Quero Transformar Minha Parede
+          Preencher Formulário de Orçamento
         </a>
         <a href="#o-que-e" class="btn btn-outline">Saiba Mais</a>
       </div>
@@ -137,12 +140,8 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           Acabamento garantido
         </div>
-        <div class="chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Alta precisão
-        </div>
       </div>
-      <a href="#" class="btn btn-gold" data-cta="form" id="bois-offer-cta">Pedir Orçamento Grátis</a>
+      <a href="#" class="btn btn-gold" data-cta="form" id="bois-offer-cta">Pedir Orçamento no Formulário</a>
     </div>
   </div>
 </section>
@@ -194,25 +193,7 @@
         <p style="color:var(--texto-muted);line-height:1.75;font-size:.95rem;margin-bottom:28px">
           Com a Aplik Decor, você escolhe as proporções, a cor final e nós realizamos a medição e instalação completa no seu endereço em Primavera do Leste ou cidades vizinhas.
         </p>
-        <ul style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--texto-muted)">
-            <svg style="color:var(--dourado);flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Aplicação sobre qualquer parede pintada ou rebocada
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--texto-muted)">
-            <svg style="color:var(--dourado);flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Personalizável em cor, espaçamento e altura
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--texto-muted)">
-            <svg style="color:var(--dourado);flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Combinação perfeita com papel de parede
-          </li>
-          <li style="display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--texto-muted)">
-            <svg style="color:var(--dourado);flex-shrink:0;margin-top:2px" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Acabamento de alto padrão que valoriza o imóvel
-          </li>
-        </ul>
-        <a href="#" class="btn btn-gold" data-cta="form" id="bois-oque-cta">Quero Orçamento</a>
+        <a href="#" class="btn btn-gold" data-cta="form" id="bois-oque-cta">Preencher Formulário</a>
       </div>
       <div data-anim data-delay="2">
         <div class="img-frame zoomable" style="aspect-ratio:3/4">
@@ -262,44 +243,6 @@
 </section>
 
 <!-- ══════════════════════════════════════
-     QUEBRADORES DE OBJEÇÃO
-═══════════════════════════════════════ -->
-<section class="section" aria-labelledby="obj-bois-title">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:52px">
-      <div class="section-label" data-anim>Suas Dúvidas</div>
-      <h2 class="section-title" id="obj-bois-title" data-anim data-delay="1">Respondemos o que você quer <span class="gold">saber</span></h2>
-    </div>
-    <div class="obj-grid" data-anim data-delay="2">
-      <div class="obj-card">
-        <div class="obj-q">A boiserie pode ser instalada em qualquer parede?</div>
-        <div class="obj-a">Sim. Pode ser aplicada sobre paredes pintadas, rebocadas ou com drywall. Nossa equipe avalia a superfície antes da fixação.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">É possível pintar de qualquer cor?</div>
-        <div class="obj-a">Sim! A boiserie recebe tinta na cor exata do seu projeto, seja no mesmo tom da parede para um visual minimalista, ou em contraste.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Quanto tempo dura?</div>
-        <div class="obj-a">Com material de alta qualidade e fixação técnica, a boiserie dura décadas sem descolar ou deformar.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Combina com papel de parede?</div>
-        <div class="obj-a">É uma das combinações mais elegantes! Boiserie na parte inferior com papel de parede no topo cria uma composição exclusiva.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Atendem empresas e consultórios?</div>
-        <div class="obj-a">Sim! Muito procurada para recepções, escritórios de advocacia, clínicas e lojas em Primavera do Leste e região.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Como calcular o valor total?</div>
-        <div class="obj-a">A partir de R$ 59 por metro linear com instalação. Solicite um orçamento informando a largura e altura da parede.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
      CTA FINAL
 ═══════════════════════════════════════ -->
 <section class="cta-final" aria-labelledby="cta-bois-final">
@@ -308,11 +251,7 @@
     <h2 class="section-title" id="cta-bois-final" data-anim data-delay="1">Sua parede merece um <span class="gold">acabamento à altura.</span></h2>
     <p class="section-sub" data-anim data-delay="2">Solicite orçamento sem compromisso. Nossa equipe atende Primavera do Leste e região.</p>
     <div class="hero-btns" style="justify-content:center;margin-top:40px" data-anim data-delay="3">
-      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="bois-final-cta">Quero Transformar Minha Parede</a>
-      <a href="#" class="btn btn-ghost btn-lg" data-cta="whatsapp" id="bois-wa-cta">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        Falar no WhatsApp
-      </a>
+      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="bois-final-cta">Preencher Formulário de Orçamento</a>
     </div>
   </div>
 </section>
@@ -349,11 +288,6 @@
             Primavera do Leste — MT
           </div>
         </div>
-        <div class="footer-social">
-          <a href="https://instagram.com/aplikdecor_" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Aplik Decor">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -362,21 +296,18 @@
   </div>
 </footer>
 
-<a href="#" class="wa-float" data-cta="whatsapp" aria-label="Falar no WhatsApp">
-  <div class="wa-badge">
-    <span class="wa-badge-dot"></span>
-    Online em Primavera do Leste
+<!-- Floating Form CTA (Desktop) -->
+<a href="#" class="float-cta" data-cta="form" aria-label="Solicitar Orçamento">
+  <div class="float-cta-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </div>
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Solicitar Orçamento</span>
 </a>
 
-<!-- STICKY MOBILE BOTTOM BAR -->
-<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ações rápidas">
+<!-- STICKY MOBILE BOTTOM BAR (100% Formulário) -->
+<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ação de conversão">
   <div class="mobile-sticky-inner">
-    <a href="#" class="btn btn-gold" data-cta="form">Orçamento Boiserie</a>
-    <a href="#" class="wa-btn-icon" data-cta="whatsapp" aria-label="WhatsApp">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    </a>
+    <a href="#" class="btn btn-gold" style="width:100%" data-cta="form">Orçamento Boiserie no Formulário</a>
   </div>
 </div>
 

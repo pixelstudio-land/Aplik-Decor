@@ -16,7 +16,7 @@
   <meta property="og:image" content="images/hero-papel.jpg">
   <meta property="og:site_name" content="Aplik Decor">
 
-  <!-- Performance & Fonts Preconnect -->
+  <!-- Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
 <header class="header" id="header">
   <div class="container">
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Aplik Decor - Página inicial">
+      <a href="index.html" class="logo" aria-label="Aplik Decor - Início">
         <svg class="logo-icon" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <polygon points="30,4 56,30 30,56 4,30" fill="none" stroke="#C4933F" stroke-width="2.5"/>
           <polygon points="30,16 44,30 30,44 16,30" fill="none" stroke="#C4933F" stroke-width="2"/>
@@ -46,11 +46,11 @@
         <a href="#projetos">Projetos</a>
         <a href="#depoimento">Depoimento</a>
         <a href="#faq">Dúvidas</a>
-        <a href="index.html">Voltar ao Início</a>
+        <a href="index.html" class="nav-back">← Início</a>
       </nav>
 
       <div class="header-actions">
-        <a href="#" class="btn btn-gold btn-sm" data-cta="form" id="papel-header-cta">Solicitar Orçamento</a>
+        <a href="#" class="btn btn-gold" data-cta="form" id="papel-header-cta">Solicitar Orçamento</a>
       </div>
 
       <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -82,14 +82,17 @@
 
   <div class="container">
     <div class="hero-content">
-      <a href="index.html" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Voltar ao início
-      </a>
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        12 anos de tradição — +400 padrões disponíveis
+      <div class="hero-nav-top">
+        <a href="index.html" class="back-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          Voltar ao início
+        </a>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          12 anos de tradição — +400 padrões disponíveis
+        </div>
       </div>
+
       <h1 class="hero-title">
         Papel de parede instalado por <span class="gold">quem mais entende do assunto.</span>
       </h1>
@@ -101,7 +104,7 @@
       <div class="hero-btns">
         <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="papel-hero-cta">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          Quero Escolher Meu Papel de Parede
+          Preencher Formulário de Escolha
         </a>
         <a href="#estilos" class="btn btn-outline">Explorar Catálogo</a>
       </div>
@@ -249,7 +252,7 @@
 
     <div style="text-align:center;margin-top:40px" data-anim data-delay="3">
       <p style="color:var(--texto-muted);font-size:.88rem;margin-bottom:20px">Procura outro modelo específico? Temos mais de 400 opções no catálogo completo.</p>
-      <a href="#" class="btn btn-outline" data-cta="form" id="papel-catalogo-cta">Consultar Catálogo Completo</a>
+      <a href="#" class="btn btn-outline" data-cta="form" id="papel-catalogo-cta">Consultar Catálogo no Formulário</a>
     </div>
   </div>
 </section>
@@ -331,51 +334,12 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px" data-anim data-delay="3">
         <div>
           <div class="testimonial-photo zoomable">
-            <img src="images/img36.jpeg" alt="Print do depoimento do Psicólogo Adriano Loos no WhatsApp elogiando a Aplik Decor" loading="lazy">
+            <img src="images/img36.jpeg" alt="Print do depoimento do Psicólogo Adriano Loos" loading="lazy">
           </div>
-          <p style="text-align:center;font-size:.68rem;color:var(--texto-muted);margin-top:8px">Depoimento real via WhatsApp (clique para ampliar)</p>
         </div>
         <div class="img-frame zoomable" style="aspect-ratio:3/4">
           <img src="images/img34.jpeg" alt="Ambiente decorado com papel de parede pela Aplik Decor" loading="lazy">
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════════════════════════
-     QUEBRADORES DE OBJEÇÃO
-═══════════════════════════════════════ -->
-<section class="section section-alt" aria-labelledby="obj-papel-title">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:52px">
-      <div class="section-label" data-anim>Suas Dúvidas</div>
-      <h2 class="section-title" id="obj-papel-title" data-anim data-delay="1">Respondemos o que você quer <span class="gold">saber</span></h2>
-    </div>
-    <div class="obj-grid" data-anim data-delay="2">
-      <div class="obj-card">
-        <div class="obj-q">Papel de parede estraga fácil?</div>
-        <div class="obj-a">Os papéis atuais contam com proteção lavável e antimofo, garantindo anos de beleza sem desbotar ou rasgar no uso diário.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">É difícil de instalar?</div>
-        <div class="obj-a">Com a Aplik Decor você não precisa se preocupar: nossa equipe especializada com 12 anos de estrada cuida do alinhamento milimétrico e da aplicação sem emendas visíveis.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Posso usar só numa parede de destaque?</div>
-        <div class="obj-a">Sim! A parede de cabeceira no quarto ou a parede da TV na sala são as mais procuradas para criar um ponto focal marcante.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Atendem Campo Verde e Rondonópolis?</div>
-        <div class="obj-a">Sim! Atendemos toda a cidade de Primavera do Leste e municípios da região. Fale com nosso time para consultar sua rota.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">Como escolher o padrão certo?</div>
-        <div class="obj-a">Apresentamos fotos e simulações com base na iluminação e mobília do seu cômodo para que você tenha 100% de segurança na escolha.</div>
-      </div>
-      <div class="obj-card">
-        <div class="obj-q">O preço já inclui a instalação?</div>
-        <div class="obj-a">Sim! A partir de R$ 399 o rolo já com produto de alta qualidade e instalação profissional inclusos.</div>
       </div>
     </div>
   </div>
@@ -390,11 +354,7 @@
     <h2 class="section-title" id="cta-papel-final" data-anim data-delay="1">Escolha o papel. <span class="gold">A gente instala.</span></h2>
     <p class="section-sub" data-anim data-delay="2">Consulte nosso catálogo de +400 padrões e encontre a textura certa para o seu ambiente em Primavera do Leste e região.</p>
     <div class="hero-btns" style="justify-content:center;margin-top:40px" data-anim data-delay="3">
-      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="papel-final-cta">Quero Escolher Meu Papel de Parede</a>
-      <a href="#" class="btn btn-ghost btn-lg" data-cta="whatsapp" id="papel-wa-cta">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-        Falar no WhatsApp
-      </a>
+      <a href="#" class="btn btn-gold btn-lg" data-cta="form" id="papel-final-cta">Preencher Formulário de Orçamento</a>
     </div>
   </div>
 </section>
@@ -430,15 +390,6 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Primavera do Leste — MT
           </div>
-          <div class="footer-contact-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            <a href="https://instagram.com/aplikdecor_" target="_blank" rel="noopener noreferrer">@aplikdecor_</a>
-          </div>
-        </div>
-        <div class="footer-social">
-          <a href="https://instagram.com/aplikdecor_" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Aplik Decor">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
         </div>
       </div>
     </div>
@@ -448,21 +399,18 @@
   </div>
 </footer>
 
-<a href="#" class="wa-float" data-cta="whatsapp" aria-label="Falar no WhatsApp">
-  <div class="wa-badge">
-    <span class="wa-badge-dot"></span>
-    Online em Primavera do Leste
+<!-- Floating Form CTA (Desktop) -->
+<a href="#" class="float-cta" data-cta="form" aria-label="Solicitar Orçamento">
+  <div class="float-cta-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </div>
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <span>Solicitar Orçamento</span>
 </a>
 
-<!-- STICKY MOBILE BOTTOM BAR -->
-<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ações rápidas">
+<!-- STICKY MOBILE BOTTOM BAR (100% Formulário) -->
+<div class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Ação de conversão">
   <div class="mobile-sticky-inner">
-    <a href="#" class="btn btn-gold" data-cta="form">Orçamento Papel de Parede</a>
-    <a href="#" class="wa-btn-icon" data-cta="whatsapp" aria-label="WhatsApp">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-    </a>
+    <a href="#" class="btn btn-gold" style="width:100%" data-cta="form">Orçamento Papel de Parede no Formulário</a>
   </div>
 </div>
 

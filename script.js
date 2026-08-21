@@ -1,32 +1,27 @@
 /* ============================================
-   APLIK DECOR — SCRIPT GLOBAL & INTERATIVIDADE
+   APLIK DECOR — SCRIPT GLOBAL & CONVERSÃO
    ============================================ */
 
-// ⚠️ SUBSTITUIR PELO LINK DO FORMULÁRIO DO CLIENTE
+// ⚠️ LINK CENTRAL DO FORMULÁRIO DO CONTRATANTE
+// Todos os botões de ação e CTAs levam a este link para garantir a conversão e qualificação completa do Lead!
 const CTA_URL = "https://SEU-FORMULARIO-AQUI.com";
 
-// Link do WhatsApp
-const WA_URL = "https://wa.me/message/SRJLDHRBIWGQF1";
-
-// URLs das LPs específicas
+// URLs de navegação interna
 const LP = {
+  home:     "./index.html",
   piso:     "./piso-vinilico.html",
   boiserie: "./boiserie.html",
   papel:    "./papel-de-parede.html"
 };
 
-/* ── CTA Links ─────────────────────────── */
+/* ── Todos os CTAs vão 100% para o Formulário ─ */
 function applyCTA() {
-  document.querySelectorAll("[data-cta='form']").forEach(el => {
+  document.querySelectorAll("[data-cta='form'], [data-cta='whatsapp'], .float-cta, .mobile-sticky-bar a").forEach(el => {
     el.href = CTA_URL;
     el.target = "_blank";
     el.rel = "noopener noreferrer";
   });
-  document.querySelectorAll("[data-cta='whatsapp']").forEach(el => {
-    el.href = WA_URL;
-    el.target = "_blank";
-    el.rel = "noopener noreferrer";
-  });
+  
   document.querySelectorAll("[data-cta='piso']").forEach(el => { el.href = LP.piso; });
   document.querySelectorAll("[data-cta='boiserie']").forEach(el => { el.href = LP.boiserie; });
   document.querySelectorAll("[data-cta='papel']").forEach(el => { el.href = LP.papel; });
@@ -39,8 +34,8 @@ function initHeaderAndStickyBar() {
 
   const onScroll = () => {
     const y = window.scrollY;
-    if (h) h.classList.toggle("scrolled", y > 48);
-    if (stickyBar) stickyBar.classList.toggle("visible", y > 260);
+    if (h) h.classList.toggle("scrolled", y > 30);
+    if (stickyBar) stickyBar.classList.toggle("visible", y > 240);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
 }
@@ -75,13 +70,11 @@ function initFAQ() {
       const body = item.querySelector(".faq-body");
       const isOpen = item.classList.contains("open");
 
-      // Fechar todos
       document.querySelectorAll(".faq-item.open").forEach(el => {
         el.classList.remove("open");
         el.querySelector(".faq-body").style.maxHeight = "0";
       });
 
-      // Abrir clicado (se estava fechado)
       if (!isOpen) {
         item.classList.add("open");
         body.style.maxHeight = body.scrollHeight + "px";
@@ -120,7 +113,6 @@ function initBeforeAfter() {
       setPosition(e.clientX);
     });
 
-    // Touch events for mobile
     slider.addEventListener("touchstart", (e) => {
       isDragging = true;
       if (e.touches[0]) setPosition(e.touches[0].clientX);
@@ -136,7 +128,6 @@ function initBeforeAfter() {
 
 /* ── Lightbox Modal ─────────────────────── */
 function initLightbox() {
-  // Criar elemento Lightbox no DOM caso não exista
   if (!document.getElementById("aplik-lightbox")) {
     const lb = document.createElement("div");
     lb.id = "aplik-lightbox";
@@ -149,7 +140,7 @@ function initLightbox() {
         </div>
         <div class="lightbox-footer">
           <span class="lightbox-title" id="lightbox-title">Aplik Decor</span>
-          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Quero Este Modelo</a>
+          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Solicitar Orçamento Deste Modelo</a>
         </div>
       </div>
     `;
@@ -174,7 +165,7 @@ function initLightbox() {
     document.body.style.overflow = "";
   };
 
-  lbClose.addEventListener("click", closeLightbox);
+  if (lbClose) lbClose.addEventListener("click", closeLightbox);
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
   });
@@ -182,7 +173,6 @@ function initLightbox() {
     if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
   });
 
-  // Vincular em itens zoomable / galeria / estilos
   document.querySelectorAll(".gitem, .style-item, .zoomable").forEach(item => {
     item.classList.add("zoomable");
     item.addEventListener("click", () => {
