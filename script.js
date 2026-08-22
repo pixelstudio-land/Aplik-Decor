@@ -83,49 +83,6 @@ function initFAQ() {
   });
 }
 
-/* ── Before & After Interactive Slider ─── */
-function initBeforeAfter() {
-  const sliders = document.querySelectorAll(".ba-container");
-  sliders.forEach(slider => {
-    const after = slider.querySelector(".ba-after");
-    const handle = slider.querySelector(".ba-handle");
-    if (!after || !handle) return;
-
-    let isDragging = false;
-
-    const setPosition = (clientX) => {
-      const rect = slider.getBoundingClientRect();
-      let pos = ((clientX - rect.left) / rect.width) * 100;
-      if (pos < 0) pos = 0;
-      if (pos > 100) pos = 100;
-      after.style.width = pos + "%";
-      handle.style.left = pos + "%";
-    };
-
-    slider.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      setPosition(e.clientX);
-    });
-
-    window.addEventListener("mouseup", () => { isDragging = false; });
-    window.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-      setPosition(e.clientX);
-    });
-
-    slider.addEventListener("touchstart", (e) => {
-      isDragging = true;
-      if (e.touches[0]) setPosition(e.touches[0].clientX);
-    }, { passive: true });
-
-    window.addEventListener("touchend", () => { isDragging = false; });
-    window.addEventListener("touchmove", (e) => {
-      if (!isDragging) return;
-      if (e.touches[0]) setPosition(e.touches[0].clientX);
-    }, { passive: true });
-  });
-}
-
 /* ── Lightbox Modal ─────────────────────── */
 function initLightbox() {
   if (!document.getElementById("aplik-lightbox")) {
@@ -140,7 +97,7 @@ function initLightbox() {
         </div>
         <div class="lightbox-footer">
           <span class="lightbox-title" id="lightbox-title">Aplik Decor</span>
-          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Solicitar Orçamento Deste Modelo</a>
+          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Quero Encontrar Minha Solução</a>
         </div>
       </div>
     `;
@@ -229,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeaderAndStickyBar();
   initMenu();
   initFAQ();
-  initBeforeAfter();
   initLightbox();
   initWallpaperFilter();
   initAnimations();

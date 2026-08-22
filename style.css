@@ -564,48 +564,224 @@ h1,h2,h3,h4,h5{
 .why-desc{font-size:.76rem;color:var(--texto-muted);line-height:1.55}
 
 /* ================
-   TESTIMONIAL
+   TESTIMONIALS (3 CARDS)
    ================ */
-.testimonial{
-  background:var(--preto-card);
-  border:1px solid var(--dourado-borda);
-  border-radius:var(--r-lg);padding:32px;
-  position:relative;
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
-.testimonial::before{
-  content:'"';
-  position:absolute;top:12px;left:22px;
-  font-size:5.5rem;color:var(--dourado);opacity:.18;
-  font-family:'Manrope',sans-serif;font-weight:900;line-height:1;
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.testimonial-text{
-  font-size:.98rem;color:var(--texto);line-height:1.75;
-  margin-bottom:22px;padding-top:28px;
+
+.testimonial {
+  background: var(--preto-card);
+  border: 1px solid var(--dourado-borda);
+  border-radius: var(--r-lg);
+  padding: 28px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
 }
-.testimonial-author{display:flex;align-items:center;gap:14px}
-.testimonial-avatar{
-  width:48px;height:48px;border-radius:50%;
-  background:var(--dourado-pale);border:2px solid var(--dourado-borda);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Manrope',sans-serif;font-weight:800;
-  font-size:1.1rem;color:var(--dourado);
-  overflow:hidden;flex-shrink:0;
+.testimonial:hover {
+  transform: translateY(-4px);
+  border-color: var(--dourado);
+  background: var(--preto-card2);
 }
-.testimonial-avatar img{width:100%;height:100%;object-fit:cover}
-.testimonial-name{
-  font-family:'Manrope',sans-serif;font-weight:700;
-  font-size:.9rem;color:var(--creme);
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  font-size: 4.5rem;
+  color: var(--dourado);
+  opacity: 0.15;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 900;
+  line-height: 1;
 }
-.testimonial-role{font-size:.76rem;color:var(--texto-muted);margin-top:2px}
-.stars{color:var(--dourado);font-size:.82rem;margin-bottom:3px;letter-spacing:2px}
+.testimonial-text {
+  font-size: 0.88rem;
+  color: var(--texto);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding-top: 18px;
+  flex: 1;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dourado-pale);
+  border: 1.5px solid var(--dourado-borda);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--dourado-light);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial-name {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--creme);
+}
+.testimonial-role {
+  font-size: 0.74rem;
+  color: var(--texto-muted);
+  margin-top: 1px;
+}
+.stars {
+  color: var(--dourado);
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
 
 /* Photo testimonial (print WhatsApp) */
-.testimonial-photo{
-  border-radius:var(--r);overflow:hidden;
-  border:1px solid var(--dourado-borda);
-  max-width:360px;margin:0 auto;
+.testimonial-photo {
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--dourado-borda);
+  max-width: 340px;
+  margin: 0 auto;
 }
-.testimonial-photo img{width:100%;height:auto}
+.testimonial-photo img { width: 100%; height: auto; }
+
+/* ================
+   MAP & LOCATION SECTION
+   ================ */
+.location-card {
+  background: var(--preto-card);
+  border: 1px solid var(--dourado-borda);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .location-card {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+.location-map {
+  min-height: 320px;
+  width: 100%;
+  position: relative;
+  background: #111;
+}
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: none;
+  filter: invert(90%) hue-rotate(180deg) contrast(90%);
+}
+.location-info {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.location-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--creme);
+  margin-bottom: 12px;
+}
+.location-desc {
+  font-size: 0.88rem;
+  color: var(--texto-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.location-items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--creme-escuro);
+}
+.location-item svg {
+  color: var(--dourado);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* ================
+   INSTAGRAM SHOWCASE BANNER
+   ================ */
+.insta-box {
+  background: linear-gradient(135deg, rgba(196,147,63,0.08) 0%, rgba(20,18,16,0.95) 100%);
+  border: 1px solid var(--dourado-borda);
+  border-radius: var(--r-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 40px;
+}
+.insta-box-text {
+  max-width: 580px;
+}
+.insta-box-title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--creme);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.insta-box-sub {
+  font-size: 0.86rem;
+  color: var(--texto-muted);
+  line-height: 1.6;
+}
+.btn-insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 0.84rem;
+  letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 18px rgba(220, 39, 67, 0.3);
+}
+.btn-insta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(220, 39, 67, 0.45);
+}
 
 /* ================
    OBJECTIONS
