@@ -581,7 +581,7 @@ h1,h2,h3,h4,h5{
   background: var(--preto-card);
   border: 1px solid var(--dourado-borda);
   border-radius: var(--r-lg);
-  padding: 28px 24px;
+  padding: 32px 28px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -606,10 +606,10 @@ h1,h2,h3,h4,h5{
   line-height: 1;
 }
 .testimonial-text {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   color: var(--texto);
-  line-height: 1.7;
-  margin-bottom: 20px;
+  line-height: 1.75;
+  margin-bottom: 24px;
   padding-top: 18px;
   flex: 1;
 }
@@ -634,7 +634,6 @@ h1,h2,h3,h4,h5{
   overflow: hidden;
   flex-shrink: 0;
 }
-.testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .testimonial-name {
   font-family: 'Manrope', sans-serif;
   font-weight: 700;
@@ -652,16 +651,6 @@ h1,h2,h3,h4,h5{
   margin-bottom: 4px;
   letter-spacing: 2px;
 }
-
-/* Photo testimonial (print WhatsApp) */
-.testimonial-photo {
-  border-radius: var(--r);
-  overflow: hidden;
-  border: 1px solid var(--dourado-borda);
-  max-width: 340px;
-  margin: 0 auto;
-}
-.testimonial-photo img { width: 100%; height: auto; }
 
 /* ================
    MAP & LOCATION SECTION
