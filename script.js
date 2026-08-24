@@ -2,9 +2,12 @@
    APLIK DECOR — SCRIPT GLOBAL & CONVERSÃO
    ============================================ */
 
-// ⚠️ LINK CENTRAL DO FORMULÁRIO DO CONTRATANTE
-// Todos os botões de ação e CTAs levam a este link para garantir a conversão e qualificação completa do Lead!
-const CTA_URL = "https://SEU-FORMULARIO-AQUI.com";
+// ⚠️ LINKS OFICIAIS DOS FORMULÁRIOS RESPONDI APP
+const FORMS = {
+  papel:    "https://form.respondi.app/eNDWZlpi", // Papel de Parede
+  piso:     "https://form.respondi.app/vMvwoiIA", // Piso Vinílico
+  boiserie: "https://form.respondi.app/ZEn7u8cu"  // Moldura Boiserie
+};
 
 // URLs de navegação interna
 const LP = {
@@ -14,14 +17,42 @@ const LP = {
   papel:    "./papel-de-parede.html"
 };
 
-/* ── Todos os CTAs vão 100% para o Formulário ─ */
+/* ── Atribuição inteligente dos links de conversão ── */
 function applyCTA() {
+  const currentPath = window.location.pathname.toLowerCase();
+  
+  // Determina o formulário da página atual
+  let defaultForm = FORMS.piso;
+  if (currentPath.includes("papel")) {
+    defaultForm = FORMS.papel;
+  } else if (currentPath.includes("boiserie")) {
+    defaultForm = FORMS.boiserie;
+  } else if (currentPath.includes("piso")) {
+    defaultForm = FORMS.piso;
+  }
+
+  // Aplica aos botões gerais de conversão
   document.querySelectorAll("[data-cta='form'], [data-cta='whatsapp'], .float-cta, .mobile-sticky-bar a").forEach(el => {
-    el.href = CTA_URL;
+    // Se for na Home e o botão não tiver produto específico, leva para a escolha ou form
+    if (currentPath.endsWith("index.html") || currentPath.endsWith("/")) {
+      if (el.id === "hero-cta-main" || el.id === "header-cta" || el.id === "final-cta" || el.classList.contains("float-cta")) {
+        el.href = FORMS.piso; // Form padrão institucional
+      } else {
+        el.href = defaultForm;
+      }
+    } else {
+      el.href = defaultForm;
+    }
     el.target = "_blank";
     el.rel = "noopener noreferrer";
   });
   
+  // CTAs com direcionamento explícito por produto
+  document.querySelectorAll("[data-cta='form-piso']").forEach(el => { el.href = FORMS.piso; el.target = "_blank"; el.rel = "noopener noreferrer"; });
+  document.querySelectorAll("[data-cta='form-boiserie']").forEach(el => { el.href = FORMS.boiserie; el.target = "_blank"; el.rel = "noopener noreferrer"; });
+  document.querySelectorAll("[data-cta='form-papel']").forEach(el => { el.href = FORMS.papel; el.target = "_blank"; el.rel = "noopener noreferrer"; });
+
+  // Links internos de navegação entre LPs
   document.querySelectorAll("[data-cta='piso']").forEach(el => { el.href = LP.piso; });
   document.querySelectorAll("[data-cta='boiserie']").forEach(el => { el.href = LP.boiserie; });
   document.querySelectorAll("[data-cta='papel']").forEach(el => { el.href = LP.papel; });
