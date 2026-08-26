@@ -1527,3 +1527,30 @@ h1,h2,h3,h4,h5{
   line-height: 1.5;
 }
 
+/* WhatsApp Large Button for Thank you Consultoria */
+.btn-whatsapp-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #25D366, #1EBE5D);
+  color: #FFFFFF;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+  padding: 16px 36px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s var(--ease);
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.btn-whatsapp-large:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.5);
+  background: linear-gradient(135deg, #28E770, #22D065);
+  color: #FFFFFF;
+}
+
