@@ -15,9 +15,11 @@
   --preto-card2:  #1C1916;
   --dourado:      #C4933F;
   --dourado-light:#DFB464;
+  --dourado-claro:#DFB464;
   --dourado-dark: #9A6E28;
   --dourado-pale: rgba(196,147,63,.10);
   --dourado-borda:rgba(196,147,63,.22);
+  --dourado-gradiente: linear-gradient(135deg, #DFB464, #C4933F);
   --creme:        #F0EAD6;
   --creme-escuro: #C8BFA8;
   --texto:        #EDE7D3;
@@ -1573,7 +1575,7 @@ h1,h2,h3,h4,h5{
    ========================================================================== */
 .section-about {
   position: relative;
-  background: linear-gradient(180deg, var(--bg-card) 0%, rgba(10, 10, 10, 0.95) 100%);
+  background: linear-gradient(180deg, var(--preto-card) 0%, rgba(10, 10, 10, 0.95) 100%);
   border-top: 1px solid rgba(200, 169, 110, 0.15);
   border-bottom: 1px solid rgba(200, 169, 110, 0.15);
   padding: 96px 0;
@@ -1634,6 +1636,7 @@ h1,h2,h3,h4,h5{
   color: var(--dourado-claro);
   background: var(--dourado-gradiente);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
