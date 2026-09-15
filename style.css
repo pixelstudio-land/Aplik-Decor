@@ -76,7 +76,6 @@ h1,h2,h3,h4,h5{
   font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
   color:var(--dourado);margin-bottom:14px;
 }
-.section-label::before{content:'';display:block;width:22px;height:1px;background:var(--dourado)}
 
 .section-title{
   font-size:clamp(1.8rem,4vw,2.75rem);font-weight:800;
@@ -92,7 +91,7 @@ h1,h2,h3,h4,h5{
 .text-center .section-label{justify-content:center}
 .text-center .section-sub,.text-center .gold-divider{margin-left:auto;margin-right:auto}
 
-.gold-divider{width:44px;height:2px;background:linear-gradient(90deg,var(--dourado),transparent);margin:18px 0}
+.gold-divider{display:none}
 
 /* ================
    HEADER
