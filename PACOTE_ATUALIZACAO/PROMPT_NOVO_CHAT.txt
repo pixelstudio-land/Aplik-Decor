@@ -1,0 +1,6 @@
+Olá! Estou nesta pasta do repositório da Aplik Decor.
+Por favor, aplique cirurgicamente todas as alterações solicitadas pela Juliana no briefing de 03/10/2026.
+Toda a documentação passo a passo, o mapeamento exato de cada uma das 4 LPs e as imagens já preparadas estão organizadas na pasta:
+PACOTE_ATUALIZACAO/INSTRUCOES_EXECUCAO.md
+
+Você pode seguir o passo a passo da documentação ou executar o script auxiliar PACOTE_ATUALIZACAO/aplicar_atualizacao.py para aplicar e validar as alterações nas 4 Landing Pages (index.html, papel-de-parede.html, piso-vinilico.html, boiserie.html e style.css).

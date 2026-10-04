@@ -1792,4 +1792,41 @@ h1,h2,h3,h4,h5{
   }
 }
 
+/* ==============================================================================
+   AJUSTES OUTUBRO 2026 - BRIEFING JULIANA
+   ============================================================================== */
+/* FAQ Amarelo e Caixa Alta */
+#faq .section-title {
+  color: #e5a93c !important;
+  text-transform: uppercase !important;
+}
+
+/* Centralização das Capas de Projetos */
+.capa-centralizada, .gitem-capa img {
+  object-position: center center !important;
+  object-fit: cover !important;
+}
+
+/* Aumento de fonte dos Diferenciais */
+.why-card h3, .why-item h3, .why-title {
+  font-size: 1.15rem !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Aumento de fonte do Rodapé */
+.footer-col h4, .footer-title {
+  font-size: 1.1rem !important;
+}
+
+.footer-links a, .footer-contact p, .footer-contact span, .footer-contact-item span, .footer-contact-item p {
+  font-size: 0.95rem !important;
+}
+
+/* Ajuste responsivo dos Depoimentos (5 cards) */
+@media (min-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
 
