@@ -2,11 +2,13 @@
    APLIK DECOR — SCRIPT GLOBAL & CONVERSÃO
    ============================================ */
 
-// ⚠️ LINKS OFICIAIS DOS FORMULÁRIOS RESPONDI APP
+// ⚠️ WHATSAPP OFICIAL DE CONVERSÃO: (66) 99670-6972
+const WHATSAPP_BASE = "https://wa.me/5566996706972";
 const FORMS = {
-  papel:    "https://form.respondi.app/eNDWZlpi", // Papel de Parede
-  piso:     "https://form.respondi.app/vMvwoiIA", // Piso Vinílico
-  boiserie: "https://form.respondi.app/ZEn7u8cu"  // Moldura Boiserie
+  papel:    `${WHATSAPP_BASE}?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Papel%20de%20Parede.`,
+  piso:     `${WHATSAPP_BASE}?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Piso%20Vin%C3%ADlico.`,
+  boiserie: `${WHATSAPP_BASE}?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20Moldura%20Boiserie.`,
+  geral:    `${WHATSAPP_BASE}?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20Aplik%20Decor.`
 };
 
 // URLs de navegação interna
@@ -21,27 +23,26 @@ const LP = {
 function applyCTA() {
   const currentPath = window.location.pathname.toLowerCase();
   
-  // Determina o formulário da página atual
-  let defaultForm = FORMS.piso;
+  // Determina o link da página atual
+  let defaultLink = FORMS.geral;
   if (currentPath.includes("papel")) {
-    defaultForm = FORMS.papel;
+    defaultLink = FORMS.papel;
   } else if (currentPath.includes("boiserie")) {
-    defaultForm = FORMS.boiserie;
+    defaultLink = FORMS.boiserie;
   } else if (currentPath.includes("piso")) {
-    defaultForm = FORMS.piso;
+    defaultLink = FORMS.piso;
   }
 
   // Aplica aos botões gerais de conversão
   document.querySelectorAll("[data-cta='form'], [data-cta='whatsapp'], .float-cta, .mobile-sticky-bar a").forEach(el => {
-    // Se for na Home e o botão não tiver produto específico, leva para a escolha ou form
     if (currentPath.endsWith("index.html") || currentPath.endsWith("/")) {
       if (el.id === "hero-cta-main" || el.id === "header-cta" || el.id === "final-cta" || el.classList.contains("float-cta")) {
-        el.href = FORMS.piso; // Form padrão institucional
+        el.href = FORMS.geral;
       } else {
-        el.href = defaultForm;
+        el.href = defaultLink;
       }
     } else {
-      el.href = defaultForm;
+      el.href = defaultLink;
     }
     el.target = "_blank";
     el.rel = "noopener noreferrer";
@@ -128,7 +129,7 @@ function initLightbox() {
         </div>
         <div class="lightbox-footer">
           <span class="lightbox-title" id="lightbox-title">Aplik Decor</span>
-          <a href="#" class="btn btn-gold btn-sm" data-cta="form">Quero Encontrar Minha Solução</a>
+          <a href="https://wa.me/5566996706972" class="btn btn-gold btn-sm" data-cta="form" target="_blank" rel="noopener noreferrer">FALAR NO WHATSAPP</a>
         </div>
       </div>
     `;

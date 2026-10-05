@@ -737,13 +737,8 @@ def atualizar_piso_vinilico_html(repo_dir):
         c
     )
 
-    # 3. Galeria de Projetos: Capa + 3 Fotos Oficiais
-    galeria_novo = """    <div class="gallery gallery-4" data-anim>
-      <div class="gitem ar-43 zoomable gitem-capa capa-centralizada">
-        <img src="images/novas/capas/capa-piso-vinilico.jpg" alt="Piso Vinílico em destaque pela Aplik Decor" class="capa-centralizada" loading="lazy">
-        <div class="gitem-overlay"></div>
-        <div class="gitem-label">Piso Vinílico • Destaque do Projeto</div>
-      </div>
+    # 3. Galeria de Projetos: 3 Fotos Oficiais (sem duplicidade)
+    galeria_novo = """    <div class="gallery gallery-3" data-anim>
       <div class="gitem ar-43 zoomable">
         <img src="images/novas/projetos/piso-vinilico/piso-01-ambiente-instalado.jpg" alt="Piso Vinílico em sala de estar e ambientes integrados" loading="lazy">
         <div class="gitem-overlay"></div>
@@ -762,7 +757,7 @@ def atualizar_piso_vinilico_html(repo_dir):
     </div>"""
 
     c = re.sub(
-        r'<div class="gallery gallery-4" data-anim>.*?</div>\s*</div>\s*</section>',
+        r'<div class="gallery (?:gallery-4|gallery-3)" data-anim>.*?</div>\s*</div>\s*</section>',
         galeria_novo + "\n  </div>\n</section>",
         c,
         flags=re.DOTALL
