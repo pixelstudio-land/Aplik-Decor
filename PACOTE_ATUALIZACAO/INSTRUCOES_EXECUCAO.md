@@ -43,9 +43,9 @@ Todas as imagens enviadas por Juliana no WhatsApp já foram renomeadas, tratadas
   * `boiserie-01-painel-geometrico.jpg`
   * `boiserie-02-com-papel-liquido.jpg`
   * `boiserie-03-personalizado-luxo.jpg`
-  * `boiserie-04-classico-sala.jpg`
+  * `boiserie-04-recepcao-escritorio.jpg` (substituiu duplicata clássica)
   * `boiserie-05-com-ripado.jpg`
-  * `boiserie-06-quarto-bebe.jpg`
+  * `boiserie-06-sala-espera-lounge.jpg` (substituiu duplicata quarto bebê)
 
 ---
 
