@@ -253,9 +253,9 @@ def atualizar_index_html(repo_dir):
         <div class="gitem-label">Moldura Boiserie • Recepção & Escritório</div>
       </div>
       <div class="gitem ar-43 zoomable style-item" data-category="boiserie">
-        <img src="images/novas/projetos/boiserie/boiserie-05-com-ripado.jpg" alt="Composição elegante de boiserie com ripado" loading="lazy">
+        <img src="images/novas/projetos/boiserie/boiserie-05-com-ripado.jpg" alt="Papel de parede ripado para sala aplicado pela Aplik Decor" loading="lazy">
         <div class="gitem-overlay"></div>
-        <div class="gitem-label">Moldura Boiserie • Composição com Ripado</div>
+        <div class="gitem-label">Papel de Parede • Composição com Ripado</div>
       </div>
       <div class="gitem ar-43 zoomable style-item" data-category="boiserie">
         <img src="images/novas/projetos/boiserie/boiserie-06-sala-espera-lounge.jpg" alt="Moldura boiserie clássica instalada em sala de espera e lounge elegante" loading="lazy">
@@ -897,9 +897,9 @@ def atualizar_boiserie_html(repo_dir):
         <div class="gitem-label">Moldura Boiserie • Recepção & Escritório</div>
       </div>
       <div class="gitem ar-43 zoomable">
-        <img src="images/novas/projetos/boiserie/boiserie-05-com-ripado.jpg" alt="Composição sofisticada de boiserie com ripado" loading="lazy">
+        <img src="images/novas/projetos/boiserie/boiserie-05-jardim-arandela.jpg" alt="Moldura boiserie com iluminação de arandelas em parede externa" loading="lazy">
         <div class="gitem-overlay"></div>
-        <div class="gitem-label">Moldura Boiserie • Composição com Ripado</div>
+        <div class="gitem-label">Moldura Boiserie • Iluminação & Área Externa</div>
       </div>
       <div class="gitem ar-43 zoomable">
         <img src="images/novas/projetos/boiserie/boiserie-06-sala-espera-lounge.jpg" alt="Moldura boiserie clássica instalada em sala de espera e lounge elegante" loading="lazy">
