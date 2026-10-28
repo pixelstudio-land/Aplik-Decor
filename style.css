@@ -1858,3 +1858,13 @@ h1,h2,h3,h4,h5{
   display: inline-block;
 }
 
+/* Ajustes finos adicionais - Outubro 2026 */
+.cep-nowrap, .nowrap {
+  white-space: nowrap !important;
+}
+
+.auth-bar-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
